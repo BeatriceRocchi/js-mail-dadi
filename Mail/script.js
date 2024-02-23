@@ -6,16 +6,25 @@ const authorizedEmail = [
   "paperonDePaperoni@gmail.com",
 ];
 
-const userEmail = prompt("Inserisci la tua email: ");
-let message = "Spiacenti, non sei autorizzato ad accedere";
+const btnAccess = document.querySelector(".btn");
 
-console.log(authorizedEmail);
-console.log(userEmail);
+btnAccess.addEventListener("click", function () {
+  const userEmail = document.getElementById("user-email").value;
+  let message = "Spiacenti, non sei autorizzato ad accedere!";
+  let classOutput = "not_authorized";
 
-for (let i = 0; i < authorizedEmail.length; i++) {
-  if (userEmail === authorizedEmail[i]) {
-    message = "Sei autorizzato ad accedere";
+  console.log(authorizedEmail);
+  console.log(userEmail);
+
+  for (let i = 0; i < authorizedEmail.length; i++) {
+    if (userEmail === authorizedEmail[i]) {
+      message = "Sei autorizzato ad accedere";
+      classOutput = "authorized";
+    }
   }
-}
 
-console.log(message);
+  console.log(message);
+  document.querySelector(".output").innerHTML = `
+  <div class="${classOutput}">${message}</div>
+  `;
+});
