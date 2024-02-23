@@ -14,6 +14,12 @@ Esercizio 2: Dadi
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 ## Svolgimento
+1. Generare un numero random (da 1 a 6) per il giocatore e salvarlo in una variabile
+2. Generare un altro numero random (da 1 a 6) per il PC e salvarlo in una variabile
+3. Confrontare i due numeri random:
+    - Se numero utente > numero PC: stampare messaggio vittoria utente
+    - Se numero utente < numero PC: stampare messaggio vittoria PC
+    - Se numero utente = numero PC: stampare messaggio pareggio
 
 
 
